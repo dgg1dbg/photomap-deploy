@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/dgg1dbg/photomap-django.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:dgg1dbg/photomap-frontend.git
