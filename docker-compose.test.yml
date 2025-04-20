@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   backend:
-    build: ./backend
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile.test
     env_file:
       - .env
     container_name: backend
@@ -13,7 +15,9 @@ services:
       - redis
 
   frontend:
-    build: ./frontend
+    build: 
+        context: ./frontend
+        dockerfile: Dockerfile.test
     env_file:
       - .env
     container_name: frontend
@@ -49,7 +53,7 @@ services:
     container_name: redis
     ports:
       - "6379:6379"
-
+  
   worker:
     build:
       context: ./backend
